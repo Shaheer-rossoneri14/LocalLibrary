@@ -21,10 +21,7 @@ from django.views.generic import RedirectView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('catalog/',include('catalog.urls')),
-
     #to redirect the base URL to our application
     path('', RedirectView.as_view(url='catalog/', permanent=True)),
-
 ]
-
 path('', RedirectView.as_view(url='catalog/', permanent=True)),   
