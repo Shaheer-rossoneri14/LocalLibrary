@@ -24,4 +24,3 @@ urlpatterns = [
     #to redirect the base URL to our application
     path('', RedirectView.as_view(url='catalog/', permanent=True)),
 ]
-path('', RedirectView.as_view(url='catalog/', permanent=True)),   
