@@ -26,8 +26,17 @@ def index(request):
     # Render the HTML template index.html with the data in the context variable
     return render(request, 'index.html', context=context)
 
+#Generic class based views
 class BookListView(generic.ListView):
     model = Book
+    paginate_by=10
 
 class BookDetailView(generic.DetailView):
     model = Book
+
+class AuthorLiistView(generic.ListView):
+    model = Author
+    paginate_by=10
+
+class AuthorDetailView(generic.DetailView):
+    model = Author
